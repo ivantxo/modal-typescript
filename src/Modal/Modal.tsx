@@ -13,9 +13,6 @@ export interface ModalProps {
 }
 
 class Modal extends React.Component<ModalProps> {
-  // reference: {
-  //   modal: HTMLDivElement;
-  // };
   private modal: HTMLDivElement;
 
   onClose = (e: any) => {
@@ -37,14 +34,6 @@ class Modal extends React.Component<ModalProps> {
     }
   }
 
-  // onOutsideClick = (e: any) => {
-  //   if (!_.isNil(this.reference.modal)) {
-  //     if (!this.reference.modal.contains(e.target)) {
-  //       this.onClose(e);
-  //     }
-  //   }
-  // }
-
   componentDidMount() {
     document.addEventListener('keyup', this.onKeyUp);
     document.addEventListener('mousedown', this.onOutsideClick, false);
@@ -61,9 +50,7 @@ class Modal extends React.Component<ModalProps> {
     }
     return (
       <StyledModalOverLay>
-        {/*<StyledModal ref={(node: any) => { this.reference.modal = node; }}>*/}
-        <StyledModal ref={(node: any) => { this.modal = node; }}>
-        {/*<StyledModal>*/}
+        <StyledModal innerRef={(node: any) => { this.modal = node; }}>
           <div>
             {this.props.children}
           </div>
