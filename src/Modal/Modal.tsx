@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as _ from 'lodash';
 import {
-  StyledButton,
   StyledFooter,
   StyledModal,
   StyledModalHeader,
@@ -59,11 +58,7 @@ class Modal extends React.Component<ModalProps> {
             Modal Window
             <a href="#" onClick={(e) => { this.onClose(e); }}>X</a>
           </StyledModalHeader>
-          <StyledFooter>
-            <StyledButton>
-              Close modal
-            </StyledButton>
-          </StyledFooter>
+          <StyledFooter/>
         </StyledModal>
       </StyledModalOverLay>
     );
