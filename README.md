@@ -4,6 +4,7 @@ It can renders any DOM. It closes on Close Button, ESC Key and when you click ou
 
 ### Instructions:
 ```angular2html
+$ create-react-app modal-typescript --scripts-version=react-scripts-ts
 $ git clone git@github.com:ivantxo/modal-typescript.git
 $ cd modal-typescript
 $ npm i
