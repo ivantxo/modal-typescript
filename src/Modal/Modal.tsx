@@ -4,6 +4,7 @@ import {
   StyledButton,
   StyledFooter,
   StyledModal,
+  StyledModalHeader,
   StyledModalOverLay,
 } from './styles';
 
@@ -54,9 +55,12 @@ class Modal extends React.Component<ModalProps> {
           <div>
             {this.props.children}
           </div>
-
+          <StyledModalHeader>
+            Modal Window
+            <a href="#" onClick={(e) => { this.onClose(e); }}>X</a>
+          </StyledModalHeader>
           <StyledFooter>
-            <StyledButton onClick={(e) => { this.onClose(e); }}>
+            <StyledButton>
               Close modal
             </StyledButton>
           </StyledFooter>

@@ -47,3 +47,28 @@ export const StyledButton = styled.button`
     background: #466d87;
   }
 `;
+
+export const StyledModalHeader = styled.div`
+  color: white;
+  background: #333;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  top: -221px;
+  height: 50px;
+  box-sizing: border-box;
+
+  a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    display: block;
+    padding: 0 20px;
+    font-size:16px;
+    background: #555;
+    height: 100%;  
+  }
+`;
